@@ -5,7 +5,7 @@ Home: https://github.com/CiscoDevNet/webexteamssdk
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Community-developed Python SDK for the Webex Teams APIs
 
