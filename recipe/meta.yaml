@@ -1,5 +1,5 @@
 {% set name = "webexteamssdk" %}
-{% set version = "1.3" %}
+{% set version = "1.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 161e0bbc9b7b044f9b765b9b9767642740e3421a428ec7bfc34b1b8e25437127
+  sha256: 980f268d89187d1a157dfbadcb626fce849080a31550e549cfe838f0203b3a3d
 
 build:
   number: 0
