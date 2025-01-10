@@ -7,29 +7,35 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 161e0bbc9b7b044f9b765b9b9767642740e3421a428ec7bfc34b1b8e25437127
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - setuptools
+    - python {{ python_min }}
   run:
     - future
     - pyjwt
-    - python
+    - python >={{ python_min }}
     - requests >=2.4.2
     - requests-toolbelt
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - webexteamssdk
     - webexteamssdk.api
+  commands:
+    - pip check
 
 about:
   home: https://github.com/CiscoDevNet/webexteamssdk
